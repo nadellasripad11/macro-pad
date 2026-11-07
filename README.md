@@ -15,7 +15,7 @@ i wanted something small that i would actually use every day, and something that
 
 ## how
 
-twelve keys, four across and three deep, 19.05mm pitch, plus one encoder on the right in line with the middle row. direct wiring, one gpio per key, no matrix, no diodes. the keys are active low with internal pull ups. the encoder is a bourns pec11r, a and b on gp14 and gp15, push on gp16. the board is a pimoroni pico lipo 16mb, pico footprint, usb-c at the back. the sockets are kailh hot swap, soldered to the pcb, then the switches pop in. the firmware is a circuitpython outline, not run on a board yet.
+twelve keys, four across and three deep, 19.05mm pitch, plus one encoder on the right in line with the middle row. direct wiring, one gpio per key, no matrix, no diodes. the keys are active low with internal pull ups. the encoder is a bourns pec11r, a and b on GP14 and GP15, push on GP16. the board is a pimoroni pico lipo 16mb, pico footprint, usb-c at the back. the sockets are kailh hot swap, soldered to the pcb, then the switches pop in. the firmware is a circuitpython outline, not run on a board yet.
 
 the pcb is 112 by 70mm, 2 layer, in `pcb/macro-pad.kicad_pcb`, with gerbers in `pcb/gerbers/`. the plate is 112 by 70mm, dxf in `plate/plate-112x70.dxf`, 12x 14x14mm cutouts and a 7mm knob hole.
 
@@ -27,7 +27,7 @@ this is design only. nothing here is built or tested on hardware yet.
 - the encoder footprint is provisional, check it against the bourns datasheet before ordering a pcb.
 - the plate thickness is 1.5mm in the dxf notes, sendcutsend closest stock is 0.063in, 1.6mm.
 - no mounting holes, no corner radius yet.
-- the switches and sockets are kono, decided november 7. kono cart failed with a 200 parsererror on november 7, cart empty, no cart total yet, sripad will take the cart screenshots himself. aliexpress 21.77 live cart nov 7 was the other option, rejected, see `BOM-draft.md`.
+- the switches and sockets are kono, decided november 7. kono cart failed with a 200 parsererror on november 7, cart empty, no cart total yet, i will take the cart screenshots myself. aliexpress 21.77 live cart nov 7 was the other option, rejected, see `BOM-draft.md`.
 
 ## bom
 
@@ -36,8 +36,8 @@ verified, snapshot, and to be decided lines are kept separate in `BOM-draft.md`.
 | part | price | where | status |
 |---|---|---|---|
 | pimoroni pico lipo 16mb | $15.95 | [pishop us](https://www.pishop.us/product/pimoroni-pico-lipo-16mb/), live cart nov 7 | in stock, headers not included |
-| bourns pec11r-4220f-s0024 encoder | $2.69 | [digikey](http://www.digikey.com/en/products/detail/PEC11R-4220F-S0024/PEC11R-4220F-S0024-ND/4499660), live cart nov 7 | 8,700 in stock |
-| gateron yellow ks-9 switches, 2x 10 pack | $2.70 each | [kono](https://kono.store/collections/switches/products/gateron-switches), live page nov 7 | available, cart failed, no cart total |
+| bourns PEC11R-4220F-S0024 encoder | $2.69 | [digikey](http://www.digikey.com/en/products/detail/PEC11R-4220F-S0024/PEC11R-4220F-S0024-ND/4499660), live cart nov 7 | 8,700 in stock |
+| gateron yellow KS-9 switches, 2x 10 pack | $2.70 each | [kono](https://kono.store/collections/switches/products/gateron-switches), live page nov 7 | available, cart failed, no cart total |
 | kailh hot swap sockets, 25 pack | $3.49 | [kono](https://kono.store/collections/mechanical-keyswitches/products/kailh-hot-swap-pcb-socket), live page nov 7 | in stock, cart failed, no cart total |
 | ymdk white 1u keycaps, 12 | $2.26 cart | [ymdk](https://ymdkey.com/products/cherry-profile-1u-r1-r2-r3-r4-blank-thick-pbt-alphanumeric-custom-keycaps-for-keycap-diy) | cart shown |
 | adafruit 5528 silver knob | $2.95 | [digikey](https://www.digikey.com:443/en/products/detail/adafruit-industries-llc/5528/16653404), live cart nov 3 | in stock, shipping $8.49 est |
@@ -48,10 +48,10 @@ verified, snapshot, and to be decided lines are kept separate in `BOM-draft.md`.
 ## files
 
 - `images/layout-diagram.png` — top view, 12 keys, knob on the right
-- `images/schematic-finished.png` — schematic, gp2 to gp16, common ground
+- `images/schematic-finished.png` — schematic, GP2 to GP16, common ground
 - `images/schematic-wiring-diagram.png` — wiring diagram
 - `images/plate-drawing.png` — plate drawing for a quote, not to scale for cutting
-- `pinout.csv` / `netlist.csv` — gp2 to gp16 mapping
+- `pinout.csv` / `netlist.csv` — GP2 to GP16 mapping
 - `firmware/firmware_outline.py` — circuitpython outline, syntax checked only, not run on a board
 - `cart-screenshots/` — cart and quote captures, totals as shown on the page
 

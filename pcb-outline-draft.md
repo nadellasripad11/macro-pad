@@ -1,6 +1,6 @@
 pcb outline draft - not a fabrication order
 
-this is a draft outline for the macro pad pcb. it matches pinout.csv and the plate drawing. gerbers DO exist now in pcb/gerbers/ (6 rs-274x files + 2 drill files, generated 2026-11-07, see pcb/BUILD-NOTE.md). they were NOT plotted in kicad and drc has NOT been run — open the pcb in real kicad and run drc before any fab order.
+this is a draft outline for the macro pad pcb. it matches pinout.csv and the plate drawing. gerbers do exist now in pcb/gerbers/ (6 RS-274X files + 2 drill files, generated 2026-11-07, see pcb/BUILD-NOTE.md). they were not plotted in kicad and drc has not been run — open the pcb in real kicad and run drc before any fab order.
 
 board outline
 - overall pcb size, draft: 112 mm wide x 70 mm deep, to match the plate drawing. final size can shrink once the case is picked, but the key and encoder positions below must not move relative to each other.
@@ -17,12 +17,12 @@ key and encoder positions, from the top left corner of the pcb, same grid as the
 - switch cutouts on the plate are 14 x 14 mm. the pcb needs the matching switch holes and socket pads at each key centre, not a 14 mm hole in the pcb itself.
 
 kailh socket pads requirement
-- 12 x kailh hot swap sockets, one per key, footprint cpg151101s11.
+- 12 x kailh hot swap sockets, one per key, footprint CPG151101S11.
 - each socket: two pads, one to the key gpio, one to the common ground bus.
-- gpio mapping, from pinout.csv: k1 gp2, k2 gp3, k3 gp4, k4 gp5, k5 gp6, k6 gp7, k7 gp8, k8 gp9, k9 gp10, k10 gp11, k11 gp12, k12 gp13.
-- encoder: a gp14, b gp15, push gp16, common to ground. encoder is 3.3v logic, active low inputs with internal pull ups.
+- gpio mapping, from pinout.csv: k1 GP2, k2 GP3, k3 GP4, k4 GP5, k5 GP6, k6 GP7, k7 GP8, k8 GP9, k9 GP10, k10 GP11, k11 GP12, k12 GP13.
+- encoder: a GP14, b GP15, push GP16, common to ground. encoder is 3.3v logic, active low inputs with internal pull ups.
 - ground: one common ground bus for all 12 keys and the encoder. no matrix, no diodes.
-- unused gpio on the pico footprint board: gp0, gp1, gp23, gp24, gp25 and the rest are left unconnected in this draft. gp25 is the pico lipo user led, gp23 is its boot button, gp29 is battery sense, so none of those are used as keys.
+- unused gpio on the pico footprint board: GP0, GP1, GP23, GP24, GP25 and the rest are left unconnected in this draft. GP25 is the pico lipo user led, GP23 is its boot button, GP29 is battery sense, so none of those are used as keys.
 
 pico module area
 - module footprint: pico footprint, approx 53 x 21 mm, placed underneath the key grid area, headers soldered to the pcb.
@@ -31,7 +31,7 @@ pico module area
 
 what is still missing before a fab order
 - a real kicad .kicad_pcb file exists now at pcb/macro-pad.kicad_pcb, hand-authored in kicad 8 format, not opened in kicad yet. open it in real kicad and run drc.
-- gerber files exist now in pcb/gerbers/, generated in python from the same coordinates as the kicad file, plus drill files, with a preview render checked by eye. they were NOT plotted by kicad.
+- gerber files exist now in pcb/gerbers/, generated in python from the same coordinates as the kicad file, plus drill files, with a preview render checked by eye. they were not plotted by kicad.
 - a fab quote for this exact outline exists now: jlcpcb $7.80 board, $16.38 cheapest landed, quote 2026-11-07, see BOM-draft.md. that is a quote, not an order.
 - a final check that the chosen encoder body and the chosen knob shaft fit the 7 mm plate hole and the encoder position.
 - case and mounting holes: tbd once the case is picked. do not drill mounting holes from this draft alone.
