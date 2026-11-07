@@ -18,7 +18,7 @@
 | 1 | Soldering iron kit, 60W | **LOCKED 2026-11-07 on Sripad's full-responsibility order: JAMCORAX 9-in-1, $11.29 on sale (was $12.59), Walmart live cart 2026-11-07, in stock, 60W, 110V, 200-450C, 5 tips, stand, solder wire and paste.** Hyper Tough 9-piece $19.97 was the fallback, live cart same day, voltage flag unresolved (110-120V features vs 100V specs table) — rejected for the flag, not just price. | Live cart screenshot: cart-screenshots/walmart-iron-cart-2026-11-07.pdf — cart $35.72 is frame $4.46 + both iron kits $31.26, free shipping, tax at checkout; do not quote $35.72 as the iron total. Iron only for Week 10 socket soldering. |
 | 1 | Silver aluminum plate / case | **Custom plate from the plate drawing: 112 x 70 mm, 14 x 14 mm MX cutouts, 19.05 mm pitch, 4x3, 7 mm knob hole.** | Fab quote DONE 2026-11-07: SendCutSend $11.63, 5052 H32 aluminum 0.063in (1.6mm), $14.17 with deburring, shipping not shown. DXF parsed, no error, no order. Prebuilt aluminium macropads $70-$85 are full products, NOT BOM lines. |
 | 1 | Custom PCB (key + encoder footprints, Kailh socket pads) | **Gerbers DO exist now in pcb/gerbers/, generated 2026-11-07, not KiCad-plotted, DRC not run.** Real KiCad file at pcb/macro-pad.kicad_pcb. | Fab quote DONE 2026-11-07: JLCPCB $7.80 board, $16.38 cheapest landed (Global Standard, not DDP), $34.40 UPS DDP. Gerbers parsed, no error, no order. The old $2 promo does NOT apply (112mm > 100mm limit). |
-| 1 | USB-C cable (board to computer) | TBD — only if Sripad does not already own a usable one; do not assume. | Ownership never confirmed. |
+| 1 | USB-C cable (board to computer) | OWNED — Sripad owns one, will use his own. Do NOT add to BOM. | Confirmed 2026-11-07. |
 | — | USB power bank ($8-15, earlier Week 5 plan) | **OUT of core BOM** — only add if Sripad later says portable; parts must be genuinely used. | — |
 
 ## B. Rejected / superseded lines (do not use)
@@ -49,10 +49,10 @@ Adding verified + snapshot + TBD prices together would produce a fake total. A H
 
 1. Pico LiPo cart screenshot + header set price (or WeAct live cart, if the AliExpress route is chosen). Board live page re-verified 2026-11-07: $15.95 InStock, headers NOT included, header sets $1.45-$2.95 generic, specific set not verified; headers optional for direct wiring.
 2. PEC11R live cart DONE 2026-11-07, $2.69 DigiKey, footprint likely fits EC11, use PEC11R footprint in KiCad.
-3. Kono cart FAILED again 2026-11-07 (200 parsererror, cart empty) — switches/sockets sourcing decision still open: Kono $8.89 arithmetic only, no cart proof, vs AliExpress $21.88 live cart Nov 3.
+3. Kono cart FAILED again 2026-11-07 (200 parsererror, cart empty) — switches/sockets DECIDED 2026-11-07: Kono, Sripad to take cart screenshots and enter BOM in Half Life himself. Kono $8.89 arithmetic only until his screenshot lands. AliExpress $21.77 live cart Nov 7 rejected by that decision.
 4. Plate fab quote DONE 2026-11-07: SendCutSend $11.63, DXF parsed, no error. PCB Gerbers DONE 2026-11-07 in pcb/gerbers/, not KiCad-plotted, DRC not run.
 5. Iron kit LOCKED 2026-11-07: JAMCORAX $11.29, Walmart live cart.
-6. USB-C cable: owned or buy.
+6. USB-C cable: OWNED, Sripad owns one, do not add to BOM.
 7. Real KiCad PCB + Gerbers DONE 2026-11-07, fab quote DONE 2026-11-07 (JLCPCB $7.80 / $16.38 landed). Still open: open in real KiCad and run DRC, overlay encoder footprint vs Bourns datasheet.
 8. Week 5 tier amounts on the live dashboard (do not assume Tier 1/2/3 from earlier weeks).
 

@@ -27,7 +27,7 @@ this is design only. nothing here is built or tested on hardware yet.
 - the encoder footprint is provisional, check it against the bourns datasheet before ordering a pcb.
 - the plate thickness is 1.5mm in the dxf notes, sendcutsend closest stock is 0.063in, 1.6mm.
 - no mounting holes, no corner radius yet.
-- the switches and sockets seller is still open. kono cart failed with a 200 parsererror on november 7, cart empty, no cart total. aliexpress is the other option at 21.77 live cart nov 7 for the same two lines, see `BOM-draft.md`.
+- the switches and sockets are kono, decided november 7. kono cart failed with a 200 parsererror on november 7, cart empty, no cart total yet, sripad will take the cart screenshots himself. aliexpress 21.77 live cart nov 7 was the other option, rejected, see `BOM-draft.md`.
 
 ## bom
 
