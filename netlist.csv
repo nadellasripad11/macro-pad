@@ -1,0 +1,19 @@
+net,from,to,notes
+GND,board GND pin,all key switch leg 2,common ground bus
+GND,board GND pin,encoder common C,encoder ground
+GP2,board GP2,K1 switch leg 1,direct wire no diode
+GP3,board GP3,K2 switch leg 1,direct wire no diode
+GP4,board GP4,K3 switch leg 1,direct wire no diode
+GP5,board GP5,K4 switch leg 1,direct wire no diode
+GP6,board GP6,K5 switch leg 1,direct wire no diode
+GP7,board GP7,K6 switch leg 1,direct wire no diode
+GP8,board GP8,K7 switch leg 1,direct wire no diode
+GP9,board GP9,K8 switch leg 1,direct wire no diode
+GP10,board GP10,K9 switch leg 1,direct wire no diode
+GP11,board GP11,K10 switch leg 1,direct wire no diode
+GP12,board GP12,K11 switch leg 1,direct wire no diode
+GP13,board GP13,K12 switch leg 1,direct wire no diode
+GP14,board GP14,encoder A,direct wire
+GP15,board GP15,encoder B,direct wire
+GP16,board GP16,encoder push SW1,SW2 to GND
+VBUS/USB,USB-C port,board 5V in,desk USB power only

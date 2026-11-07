@@ -1,0 +1,16 @@
+ref,function_layer0,gpio,other_leg,position,notes
+K1,Copy,GP2,GND,back row col 1,active LOW internal pull-up
+K2,Paste,GP3,GND,back row col 2,active LOW internal pull-up
+K3,Cut,GP4,GND,back row col 3,active LOW internal pull-up
+K4,Undo,GP5,GND,back row col 4,active LOW internal pull-up
+K5,Save,GP6,GND,middle row col 1,active LOW internal pull-up
+K6,Play/Pause,GP7,GND,middle row col 2,active LOW internal pull-up
+K7,Previous track,GP8,GND,middle row col 3,active LOW internal pull-up
+K8,Next track,GP9,GND,middle row col 4,active LOW internal pull-up
+K9,Mute,GP10,GND,front row col 1,active LOW internal pull-up
+K10,Screenshot,GP11,GND,front row col 2,active LOW internal pull-up
+K11,Redo,GP12,GND,front row col 3,active LOW internal pull-up
+K12,Hold = Layer 1,GP13,GND,front row col 4,hold not tap-toggle
+ENC-A,Encoder A quadrature,GP14,GND via encoder common,knob right of grid,3.3V logic
+ENC-B,Encoder B quadrature,GP15,GND via encoder common,knob right of grid,3.3V logic
+ENC-SW,Encoder push = Mute,GP16,GND,knob right of grid,momentary active LOW
