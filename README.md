@@ -1,5 +1,8 @@
 # macro pad
 
+![layout](images/layout-diagram.png)
+![schematic](images/schematic-finished.png)
+
 so for week 5 freestyle i made a macro pad. its got twelve keys in a 3 by 4 grid plus one big knob on the side, no screen cause i wanted it clean.
 
 white keycaps, silver case, silver metal knob. linear switches so its smooth and quiet and theyre hot swap, so the switches just pop in after the sockets are done.
@@ -24,7 +27,7 @@ this is design only. nothing here is built or tested on hardware yet.
 - the encoder footprint is provisional, check it against the bourns datasheet before ordering a pcb.
 - the plate thickness is 1.5mm in the dxf notes, sendcutsend closest stock is 0.063in, 1.6mm.
 - no mounting holes, no corner radius yet.
-- the switches and sockets seller is still open. kono cart failed with a 200 parsererror on november 7, cart empty, no cart total. aliexpress is the other option at 21.88 for the same two lines, see `BOM-draft.md`.
+- the switches and sockets seller is still open. kono cart failed with a 200 parsererror on november 7, cart empty, no cart total. aliexpress is the other option at 21.77 live cart nov 7 for the same two lines, see `BOM-draft.md`.
 
 ## bom
 
