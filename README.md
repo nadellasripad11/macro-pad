@@ -1,58 +1,110 @@
 # macro pad
 
 ![layout](images/layout-diagram.png)
-![schematic](images/schematic-finished.png)
+![plate](images/plate-drawing.png)
 
-so for week 5 freestyle i made a macro pad. its got twelve keys in a 3 by 4 grid plus one big knob on the side, no screen cause i wanted it clean.
+a small macro pad i designed for week 5 freestyle. looks only, it is a
+display model, it just has to look good on a desk.
 
-white keycaps, silver case, silver metal knob. linear switches so its smooth and quiet and theyre hot swap, so the switches just pop in after the sockets are done.
+## the idea
 
-its running on a rp2040 board wired direct, one wire per key, no matrix stuff and no diodes to mess with. layer one is editing and media like copy paste cut save play, hold the bottom right key and you get layer two for volume and system stuff. the knob does volume or scrub depending on the layer and pushing it mutes.
+i wanted to make something clean that looks good on my desk every day.
 
-## why
+so i started designing a macro pad with 12 keys and a scroll wheel on
+the side. no screen, no rgb, no wiring, just something clean that looks
+good. the look is minimal black and silver.
 
-i wanted something small that i would actually use every day, and something that looks clean on a desk, not a big keyboard project. the look is minimal white and silver, and the pad is only for the stuff i do all the time, editing and media first, volume and system second.
+## what i am building
 
-## how
+* 12 keys arranged in a 3x4 grid
+* a silver metal mouse scroll wheel in a slot on the right edge, about
+  half of it sticking out past the edge, like a mouse wheel
+* black keycaps with little grey line icons instead of words
+* a silver aluminum plate
+* no board, no pcb, no wiring, no firmware, it does not work as a
+  keyboard
 
-twelve keys, four across and three deep, 19.05mm pitch, plus one encoder on the right in line with the middle row. direct wiring, one gpio per key, no matrix, no diodes. the keys are active low with internal pull ups. the encoder is a bourns pec11r, a and b on GP14 and GP15, push on GP16. the board is a pimoroni pico lipo 16mb, pico footprint, usb-c at the back. the sockets are kailh hot swap, soldered to the pcb, then the switches pop in. the firmware is a circuitpython outline, not run on a board yet.
+the keycaps are relegendable, i print the line icons and slide them
+under the clear tops. the switches just clip into the plate and hold
+the keycaps, no soldering. the wheel is a real 25 mm mouse wheel, the
+little encoder behind it only holds its axle, it is not wired to
+anything.
 
-the pcb is 112 by 70mm, 2 layer, in `pcb/macro-pad.kicad_pcb`, with gerbers in `pcb/gerbers/`. the plate is 112 by 70mm, dxf in `plate/plate-112x70.dxf`, 12x 14x14mm cutouts and a 7mm knob hole.
+## the hardware
 
-this is design only. nothing here is built or tested on hardware yet.
+the plate is custom cut aluminum, 112 by 70 mm, from md cnc. the
+switches are gateron milky pro yellow, they clip into the plate and
+hold the keycaps. the wheel is a metal mouse scroll wheel, about 25 mm,
+for a logitech g102/g304/g305, and the encoder under it is a ttc 11 mm
+mouse wheel encoder, mount only.
 
-## what is not finished
+here are some of the main dimensions:
 
-- the gerbers were not plotted in kicad, they were generated in python from the same coordinates. open the pcb in real kicad and run drc before any fab order. see `pcb/BUILD-NOTE.md`.
-- the encoder footprint is provisional, check it against the bourns datasheet before ordering a pcb.
-- the plate thickness is 1.5mm in the dxf notes, sendcutsend closest stock is 0.063in, 1.6mm.
-- no mounting holes, no corner radius yet.
-- the switches and sockets are kono, decided november 7. kono cart failed with a 200 parsererror on november 7, cart empty, no cart total yet, i will take the cart screenshots myself. aliexpress 21.77 live cart nov 7 was the other option, rejected, see `BOM-draft.md`.
+component	dimensions
+plate	112 x 70 mm
+key layout	3 x 4
+key spacing	19.05 mm
+key cutouts	14 x 14 mm
+wheel slot	25 mm long plus clearance, width is the wheel thickness
+plus about 1 mm, measure the wheel with calipers on arrival first
 
-## bom
+the dxf still has the old 7 mm round knob hole in it, the slot goes in
+once the wheel is measured.
 
-verified, snapshot, and to be decided lines are kept separate in `BOM-draft.md`. no total is summed here because shipping, tax, and the plate shipping are not all known yet.
+## the design files
 
-| part | price | where | status |
-|---|---|---|---|
-| pimoroni pico lipo 16mb | $15.95 | [pishop us](https://www.pishop.us/product/pimoroni-pico-lipo-16mb/), live cart nov 7 | in stock, headers not included |
-| bourns PEC11R-4220F-S0024 encoder | $2.69 | [digikey](http://www.digikey.com/en/products/detail/PEC11R-4220F-S0024/PEC11R-4220F-S0024-ND/4499660), live cart nov 7 | 8,700 in stock |
-| gateron yellow KS-9 switches, 2x 10 pack | $2.70 each | [kono](https://kono.store/collections/switches/products/gateron-switches), live page nov 7 | available, cart failed, no cart total |
-| kailh hot swap sockets, 25 pack | $3.49 | [kono](https://kono.store/collections/mechanical-keyswitches/products/kailh-hot-swap-pcb-socket), live page nov 7 | in stock, cart failed, no cart total |
-| ymdk white 1u keycaps, 12 | $2.26 cart | [ymdk](https://ymdkey.com/products/cherry-profile-1u-r1-r2-r3-r4-blank-thick-pbt-alphanumeric-custom-keycaps-for-keycap-diy) | cart shown |
-| adafruit 5528 silver knob | $2.95 | [digikey](https://www.digikey.com:443/en/products/detail/adafruit-industries-llc/5528/16653404), live cart nov 3 | in stock, shipping $8.49 est |
-| jamcorax 9-in-1 soldering iron kit, 60w | $11.29 | [walmart](https://www.walmart.com/ip/Soldering-Iron-Kit-60-W-110-V-Fast-Heat-Up-Soldering-Iron-9-In-1-Adjustable-Temperature-200-450-Soldering-Welding-Iron-Kit-for-Electronics-Hobby-Diy/19903153286), live cart nov 7 | in stock, 110v |
-| pcb, jlcpcb, 5 boards | $7.80 board, $16.38 cheapest landed | [jlcpcb quote](https://jlcpcb.com/quote), nov 7 | gerbers parsed, no order |
-| plate, sendcutsend, 5052 aluminum 0.063in | $11.63, $14.17 with deburring | [sendcutsend](https://sendcutsend.com/), quote nov 7 | dxf parsed, shipping not shown, no order |
+everything is organized in the repository so the design can be reviewed
+and worked on separately.
 
-## files
+* plate/ contains the plate dxf
+* images/ contains design and plate images
+* cart-screenshots/ contains parts and quote screenshots
 
-- `images/layout-diagram.png` — top view, 12 keys, knob on the right
-- `images/schematic-finished.png` — schematic, GP2 to GP16, common ground
-- `images/schematic-wiring-diagram.png` — wiring diagram
-- `images/plate-drawing.png` — plate drawing for a quote, not to scale for cutting
-- `pinout.csv` / `netlist.csv` — GP2 to GP16 mapping
-- `firmware/firmware_outline.py` — circuitpython outline, syntax checked only, not run on a board
-- `cart-screenshots/` — cart and quote captures, totals as shown on the page
+the pcb/ and firmware/ files still in this repo are from the earlier
+functional plan and are not part of this build. the gerbers were not
+plotted in kicad, they were generated in python, do not order from
+them. there are also pin mappings, a netlist, and a draft bill of
+materials from that earlier plan, also not part of this build.
 
-half life week 5, freestyle, weeks 5 and 10.
+## parts and costs
+
+tier 1, total $28.77 at regular prices, verified live november 8. cap
+is $33, headroom $4.23. all five lines ship free.
+
+part	price
+md cnc custom plate, aluminum, 112x70	$7.15
+gateron milky pro yellow switches, 2x 10 pack	$7.22
+metal mouse scroll wheel, silver, 25mm	$4.21
+ttc mouse wheel encoder, 11mm	$1.61
+black relegendable keycaps, 12 pack	$8.58
+
+the plate price is quote-based, $7.15 is the lowest listed tier,
+unconfirmed until md cnc quotes the dxf. the full breakdown is in
+BOM-draft.md.
+
+## current progress
+
+this is still a design project, not a finished physical build. the
+plate dxf, the look, and the parts list are in the repository.
+
+there are a few things i still need to check before ordering anything:
+
+* measure the wheel thickness with calipers on arrival, then cut the
+  slot in the plate dxf
+* get the md cnc quote from the drawing
+* check the black caps stock again, only 1 left at that listing
+* finalize the plate thickness, mounting holes, and corner radius
+
+## what is next
+
+the next step is getting the plate cut, then putting it together and
+seeing how it looks on a desk.
+
+## a little context
+
+this was made for half life week 5 freestyle, as part of weeks 5 and 10.
+
+it is a display model, not a working keyboard. the shape, spacing, and
+finish are the whole point.
+
+more updates once there is an actual macro pad on my desk.
